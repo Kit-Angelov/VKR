@@ -1,0 +1,13 @@
+{% if user.is_authenticated %}
+<p>Вы вошли как {{ user.username }} [{{ user.first_name }} {{ user.last_name }}]. <a href="{% url 'gamajunn:logout' %}">Выход</a></p>
+{% else %}<p>Вы не вошли в систему. <a href="{% url 'gamajunn:login' %}">Войти</a></p>
+{% endif %}
+{% if latest_article_list %}
+    <ul>
+        {% for article in latest_article_list %}
+        <li><a href="{% url 'gamajunn:detail' article.id %}">{{article.article_title}}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No art are available</p>
+{% endif %}

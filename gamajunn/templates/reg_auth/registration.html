@@ -1,0 +1,6 @@
+<h2>Registration</h2>
+
+   <form action="{% url 'gamajunn:register_user' %}" method="post">{% csrf_token %}
+     {{form.as_p}}   <input type="submit" value="Register" />
+
+   </form>

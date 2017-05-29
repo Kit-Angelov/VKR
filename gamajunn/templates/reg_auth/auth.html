@@ -1,0 +1,7 @@
+<h1>Auth</h1>
+
+<form action="{% url 'gamajunn:login' %}" method="post">
+{% csrf_token%}
+    {{ form }}
+    <input type="submit" value="Submit"/>
+</form>

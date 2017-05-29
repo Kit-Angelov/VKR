@@ -1,0 +1,7 @@
+<h1>{{ article.article_title }}</h1>
+<p>{{ article.article_text }}</p>
+{% for theme in article.themes.all %}
+    {{ theme.theme_name }}
+{% empty %}
+    No themes!
+{% endfor %}
