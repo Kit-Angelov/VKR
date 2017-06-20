@@ -1,0 +1,420 @@
+@font-face {
+    font-family: "Droid Sans"; /* Имя шрифта */
+    src: url(fonts/Droid_Sans/DroidSans.ttf); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: "Droid Serif"; /* Имя шрифта */
+    src: url(fonts/Droid_Serif/DroidSerif.ttf); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: "Roboto Light"; /* Имя шрифта */
+    src: url(fonts/Roboto/Roboto-Light.ttf); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: "Roboto Thin"; /* Имя шрифта */
+    src: url(fonts/Roboto/Roboto-Thin.ttf); /* Путь к файлу со шрифтом */
+   }
+
+body{
+    background-color: black;
+}
+
+li a {
+    color: green;
+}
+
+.navbar {
+
+}
+.container-fluid{
+
+}
+
+.navbar-header{
+    width: 10%;
+}
+
+.navbar-brand{
+    color: black;
+    font-family: "Roboto Thin", sans-serif !important;
+    font-size: 20pt !important;
+}
+
+.search-form {
+    width: 400px;
+    margin: auto;
+}
+
+.navbar-form form{
+    width: 600px;
+}
+
+.form-wrap{
+    width: 70%;
+    margin-left: 5%;
+    height: 50px;
+    float: left;
+}
+
+.my-form-class{
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 8px;
+    box-shadow: 0px 1.7px 5px rgba(0,0,0,0.2);
+}
+
+.form-class{
+    padding: 0;
+    margin: 0;
+}
+
+.search-input-div{
+    width: 250px;
+    float: left;
+    height: 40px;
+    margin: 0;!important;
+    padding: 0;!important;
+    margin-bottom: 0;!important;
+}
+
+.search-input{
+    width: 260px;
+    height: 40px;
+    padding: 10px;!important;
+    margin: 0;!important;
+    border: 0;
+}
+
+.search-button{
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: white;
+}
+
+.search-pic{
+    width: 32px;
+    height: 32px;
+}
+
+.user-menu{
+    position: relative;
+    text-align: right;
+    float: right;
+    font-family: "Roboto Thin", serif !important;
+}
+
+.avatar-menu{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 40px 40px 40px 40px;
+    border: 1px solid grey;
+}
+
+.dropdown-toggle{
+    color: black;
+    padding-left: 10px !important;
+}
+
+.list-art {
+    width: auto;
+    margin: auto;
+    height: auto;
+    box-shadow: 0px 1.7px 8px rgba(0,0,0,0.5);
+    background-color: white;
+    padding-top: 5px;
+    padding-left: 30px!important;
+    padding-right: 30px !important;
+    padding-bottom: 40px;
+}
+
+.content-container{
+    width: auto;
+}
+
+.row{
+    width: 100%;
+}
+
+.article-wrap{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.theme-list{
+    float: left;
+}
+
+.divide{
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.title-head{
+    height: auto;
+    width: auto;
+    margin-top: 20px;
+}
+
+.article{
+    width: auto;
+    margin: auto;
+    height: auto;
+    box-shadow: 0px 1.7px 8px rgba(0,0,0,0.5);
+    background-color: white;
+    padding-top: 5px;
+    padding-left: 30px!important;
+    padding-right: 30px !important;
+    padding-bottom: 40px;
+}
+
+.themes {
+    margin-bottom: 1px !important;
+    height: 20px;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 12pt;
+    color: grey;
+}
+
+.date-class{
+    float: right;
+    margin-bottom: 1px !important;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 12pt;
+    color: grey;
+}
+
+.article_title {
+    font-family: "Roboto Light", serif !important;
+    font-size: 36pt;
+    margin-bottom: 20px;
+}
+
+.author_name{
+    font-family: "Roboto Light", serif !important;
+    font-size: 18pt;
+    margin-bottom: 30px;
+}
+
+.article_text {
+    font-family: "Roboto Thin", sans-serif !important;
+    font-size: 18pt;
+}
+
+.login_title {
+    font-family: "Roboto Light", sans-serif !important;
+    font-size: 18pt;
+    margin-top: 20px;
+}
+
+.login-field{
+    width: 100%;
+    height: 40px;
+    padding: 10px;!important;
+    margin: 0;!important;
+    border: 0;
+    background-color: #FAFAFA;
+    font-family: "Roboto Thin", sans-serif !important;
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+
+.login-button{
+    width: 80px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #90CAF9;
+    font-family: "Roboto Light", sans-serif !important;
+    font-size: 14pt;
+}
+
+.ref-reg-block {
+    width: 160px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    padding-top: 6px;
+    border: 0;
+    color: black;
+    background-color: #E3F2FD;
+    font-family: "Roboto Light", sans-serif !important;
+    font-size: 14pt;
+}
+
+.ref-reg{
+    text-decoration: none;
+    text-align: center;
+    float: right;
+}
+
+.login-field{
+    width: 100%;
+    height: 40px;
+    padding: 10px;!important;
+    margin: 0;!important;
+    border: 0;
+    background-color: #FAFAFA;
+    font-family: "Roboto Thin", sans-serif !important;
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+
+.reg_title{
+    font-family: "Roboto Light", sans-serif !important;
+    font-size: 18pt;
+    margin-top: 20px;
+}
+
+.reg-field{
+    width: 100%;
+    height: 40px;
+    padding: 10px;!important;
+    margin: 0;!important;
+    border: 0;
+    background-color: #FAFAFA;
+    font-family: "Roboto Thin", sans-serif !important;
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+
+.password-field{
+    width: 100%;
+    height: 40px;
+    padding: 10px;!important;
+    margin: 0;!important;
+    border: 0;
+    background-color: #FAFAFA;
+    font-family: "Roboto Thin", sans-serif !important;
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+
+.reg-button{
+    width: 180px;
+    height: 40px;
+    margin: auto;
+    padding: 0;
+    border: 0;
+    background-color: #90CAF9;
+    font-family: "Roboto Light", sans-serif !important;
+    font-size: 14pt;
+}
+
+.art-in-list{
+    width: 80%;
+    float: left;
+    font-family: "Roboto Light", sans-serif !important;
+    font-size: 18pt;
+    color: black;
+    margin-top: 0 !important;
+    height: auto;
+}
+
+.art-in-list a{
+    color: black;
+}
+
+.author_name-in-list{
+    width: 20%;
+    float: right;
+    font-family: "Roboto Light", serif !important;
+    font-size: 14pt;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.date-class-in-list{
+    width: 20%;
+    float: right;
+    margin-bottom: 1px !important;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 12pt;
+    color: grey;
+    text-align: right;
+}
+
+.theme-list-in-list{
+    float: left;
+    width: 80%;
+    margin-bottom: 1px !important;
+    height: 20px;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 12pt;
+    color: grey;
+}
+
+.themes-in-list {
+}
+
+#id_text{
+    width: 100%;
+    height: 40px;
+    padding: 10px;!important;
+    margin: 0;!important;
+    border: 0;
+    background-color: #FAFAFA;
+    font-family: "Roboto Thin", sans-serif !important;
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+
+#id_title{
+    width: 100%;
+    height: 40px;
+    padding: 10px;!important;
+    margin: 0;!important;
+    border: 0;
+    background-color: #FAFAFA;
+    font-family: "Roboto Thin", sans-serif !important;
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+
+.new_art_button{
+    width: 180px;
+    height: 40px;
+    margin: auto;
+    padding: 0;
+    border: 0;
+    background-color: #90CAF9;
+    font-family: "Roboto Light", sans-serif !important;
+    font-size: 14pt;
+}
+
+.django-ckeditor-widget{
+    width: auto;
+    border: 0;
+}
+
+#cke_id_text {
+    border: 0;
+}
+
+.cke_reset iframe{
+    border: 0;
+}
+
+#cke_1_bottom{
+    border: 0;
+}
+
+#cke_1_top{
+    border: 0;
+}
+
+.new_art_title{
+    font-family: "Roboto Light", serif !important;
+    font-size: 28pt;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

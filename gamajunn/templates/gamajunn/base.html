@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'gamajunn/style.css' %}" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar navbar-static-top" role="navigation">
+        <div class="container-fluid">
+    <!-- Название компании и кнопка, которая отображается для мобильных устройств группируются для лучшего отображения при свертывании -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+
+    <!-- Группируем ссылки, формы, выпадающее меню и прочие элементы -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="form-wrap nav navbar-navbar-right">
+        <div class="my-form-class">
+      <form class="form-class" role="search">
+        <div class="form-group search-input-div">
+          <input type="text" class="search-input" placeholder="Поиск">
+        </div>
+        <button type="submit" class="search-button"><img class="search-pic" src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png"></button>
+      </form>
+        </div>
+            </div>
+      <ul class="nav navbar-nav navbar-right user-menu">
+          <li><img class="avatar-menu" src="https://cdn4.iconfinder.com/data/icons/mayssam/512/user-128.png"></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }}<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="content-container">
+    {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
