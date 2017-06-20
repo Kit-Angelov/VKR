@@ -1,7 +1,38 @@
-<h1>{{ article.article_title }}</h1>
-<p>{{ article.article_text }}</p>
-{% for theme in article.themes.all %}
-    {{ theme.theme_name }}
-{% empty %}
+{% extends "gamajunn/base.html" %}
+
+{% load gamajunn_tags %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'gamajunn/style.css' %}" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+{% block title %}{{ article.article_title }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="article-wrap">
+    <div class="col-md-2"></div>
+   <div class="col-md-8 article">
+       <div class="title-head">
+       <div class="theme-list">
+           <p class="themes">
+       {% for theme in article.themes.all %}
+           {{ theme.theme_name }}
+  {% empty %}
     No themes!
-{% endfor %}
+  {% endfor %}
+           </p>
+           </div>
+       <div class="date-class">
+           {{ article.pub_date}}
+       </div>
+           </div>
+       <hr class="divide">
+<p class="article_title">{{ article.article_title|title }}</p>
+       <p class="author_name">{{ article.author|author }}</p>
+<p class="article_text">{{ article.article_text|safe }}</p>
+</div>
+</div>
+</div>
+{% endblock %}

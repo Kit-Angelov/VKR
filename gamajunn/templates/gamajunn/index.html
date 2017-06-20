@@ -1,13 +1,46 @@
+{% extends "gamajunn/base.html" %}
+
+{% load gamajunn_tags %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'gamajunn/style.css' %}" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
 {% if user.is_authenticated %}
-<p>Вы вошли как {{ user.username }} [{{ user.first_name }} {{ user.last_name }}]. <a href="{% url 'gamajunn:logout' %}">Выход</a></p>
+
+<div class="row">
+    <div class="col-md-2"></div>
+   <div class="col-md-8 list-art">
+<h1></h1>
 {% else %}<p>Вы не вошли в систему. <a href="{% url 'gamajunn:login' %}">Войти</a></p>
 {% endif %}
+
 {% if latest_article_list %}
-    <ul>
         {% for article in latest_article_list %}
-        <li><a href="{% url 'gamajunn:detail' article.id %}">{{article.article_title}}</a></li>
+       <p class="art-in-list"><a href="{% url 'gamajunn:detail' article.id %}">{{article.article_title}}</a>
+       </p>
+       <p class="author_name-in-list">{{ article.author|author }}</p>
+       <div class="theme-list-in-list">
+           <p class="themes-in-list">
+       {% for theme in article.themes.all %}
+           {{ theme.theme_name }}
+  {% empty %}
+    No themes!
+  {% endfor %}
+           </p>
+           </div>
+       <div class="date-class-in-list">
+           {{ article.pub_date}}
+       </div>
+       <hr class="divide">
         {% endfor %}
-    </ul>
 {% else %}
     <p>No art are available</p>
 {% endif %}
+       </div>
+</div>
+{% endblock %}

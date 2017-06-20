@@ -1,7 +1,30 @@
-<h1>New Article</h1>
+{% extends "gamajunn/base.html" %}
 
-<form action="{% url 'gamajunn:new_art' %}" method="post">
+{% load gamajunn_tags %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'gamajunn/style.css' %}" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+{% block title %}{{ article.article_title }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="article-wrap">
+    <div class="col-md-2"></div>
+   <div class="col-md-8 article">
+        <p class="new_art_title">Новая статья</p>
+       <form action="{% url 'gamajunn:new_art' %}" method="post">
 {% csrf_token%}
-    {{ form }}
-    <input type="submit" value="Submit"/>
+    {{ form.media }}
+    {{ form.title}}<br>{{ form.text}}
+    <input type="submit" class="new_art_button" value="Сохранить"/>
 </form>
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}
